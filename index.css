@@ -89,10 +89,13 @@ li {
 
 .d1 input {
     width: 100%;
-    height: 30px;
+    height: 31px;
     padding-left: 10px;
     border: 2px solid #fc0;
     border-radius: 5px;
+    outline: none;
+    position: relative;
+    z-index: 1;
 }
 
 .d1 button {
@@ -103,7 +106,11 @@ li {
     background-color: #fc0;
     cursor: pointer;
     position: absolute;
-    top: 10px;
+    top: 12px;
+}
+
+.text_in_button {
+    margin: 0 0 0 10px;
 }
 
 h2 {
@@ -134,4 +141,17 @@ p {
 
 .nada {
     width: 100%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .d1 button {
+        width: 85px;
+        height: 36px;
+        border: 1px solid #fc0;
+        border-radius: 0 5px 5px 0;
+        background-color: #fc0;
+        cursor: pointer;
+        position: absolute;
+        top: 1px;
+    }
 }
