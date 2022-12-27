@@ -1,19 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+html {
+    height: 100%;
+}
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 12px;
+    height: 100%;
 }
 
 .main_container {
-    width: 50%;
-    margin-top: 10%;
-    min-height: 500px;
+    width: 600px;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .main_item_logo {
@@ -24,11 +29,17 @@ body {
 .pod_container {
     display: flex;
     width: 100%;
+    align-items: center;
+    gap: 10px;
 }
 
 .empty {
     height: 100px;
-    width: 129px;
+    width: 102px;
+}
+
+.empty1 {
+    height: 10px;
 }
 
 .error {
@@ -37,6 +48,7 @@ body {
 
 .pod_pod_container {
     display: flex;
+    flex-grow: 1;
 }
 
 a {
@@ -55,12 +67,6 @@ img {
 .col {
     display: flex;
     flex-direction: row;
-}
-
-.col2 {
-    display: flex;
-    flex-direction: row;
-    margin-left: 160px;
 }
 
 .ikons {
@@ -96,17 +102,19 @@ li {
     outline: none;
     position: relative;
     z-index: 1;
+    bottom: 0;
+    top: 0;
 }
 
-.d1 button {
+button {
     width: 85px;
-    height: 36px;
-    border: 1px solid #fc0;
+    border: 2px solid #fc0;
     border-radius: 0 5px 5px 0;
     background-color: #fc0;
     cursor: pointer;
-    position: absolute;
-    top: 12px;
+    top: 0;
+    bottom: 0;
+    right: -85px;
 }
 
 .text_in_button {
@@ -134,24 +142,54 @@ p {
 .niz {
     display: flex;
     gap: 20px;
-    position: relative;
-    top: 300px;
     color: darkgrey;
+    align-items: flex-end
 }
 
 .nada {
     width: 100%;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .d1 button {
-        width: 85px;
-        height: 36px;
-        border: 1px solid #fc0;
-        border-radius: 0 5px 5px 0;
-        background-color: #fc0;
-        cursor: pointer;
-        position: absolute;
-        top: 1px;
+.help_links {
+    display: flex;
+    flex-direction: row;
+}
+
+.for_tel {
+    display: flex;
+    width: 100%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+    .empty {
+        height: 100px;
+        width: 109px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main_container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pod_container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .for_tel {
+        display: flex;
+        width: 100%;
     }
 }
